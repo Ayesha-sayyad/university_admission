@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Admin Panel</title>
+</head>
+
+<body>
+    <h2>All Applications</h2>
+    {% for app in applications %}
+    <p>{{ loop.index }}. {{ app.name }} - {{ app.email }} - {{ app.course }}</p>
+    {% else %}
+    <p>No applications yet.</p>
+    {% endfor %}
+    <a href="/">Go Home</a>
+</body>
+
+</html>
